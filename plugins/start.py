@@ -198,7 +198,7 @@ async def not_joined(client: Client, message: Message):
             [
                 InlineKeyboardButton(
                     text='Try Again 🥺',
-                    url=f"https://t.me/{client.username}?start={message.command[1]}"
+                    url=f"https://telegram.me/{client.username}?start={message.command[1]}"
                 )
             ]
         )
@@ -230,7 +230,7 @@ async def gen_link_encoded(client: Bot, message: Message):
     if hash.text == "/cancel":
         await hash.reply("Cancelled 😉!")
         return
-    link = f"https://t.me/{client.username}?start={hash.text}"
+    link = f"https://telegram.me/{client.username}?start={hash.text}"
     reply_markup = InlineKeyboardMarkup([[InlineKeyboardButton("🎉 Click Here ", url=link)]])
     await hash.reply_text(f"<b>🧑‍💻 Here is your generated link", quote=True, reply_markup=reply_markup)
     return
